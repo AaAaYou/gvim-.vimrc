@@ -25,7 +25,6 @@ set incsearch
 set ignorecase
 set smartcase
 
-filetype off
 set mouse=a
 set encoding=utf-8
 let &t_ut=''
@@ -82,7 +81,6 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 set guifont=Consolas:h13
 :set lines=35 columns=120
-colorscheme desert
 
 map <LEADER>rc :e C:\Users\cn1341\gVimPortable\Data\settings\_vimrc<CR>
 
@@ -127,3 +125,38 @@ map tl :+tabnext<CR>
 
 
 "============ vim-vundle plugin install==================
+
+filetype off
+set shellslash
+set rtp+=$HOME\vimfiles\bundle\Vundle.vim
+call vundle#begin('$HOME\vimfiles\bundle')
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" vim-snazzy theme
+Plugin 'connorholyday/vim-snazzy'
+
+" status optimal
+Plugin 'vim-airline/vim-airline'
+
+" File navigation
+Plugin 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+" markdown
+
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+
+"===================configure plugin ===================
+
+" vim-snazzy theme
+colorscheme snazzy
+
+" markdown
+
